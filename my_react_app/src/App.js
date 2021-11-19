@@ -3,8 +3,16 @@ import './App.css';
 import { Button, Card, CardBody, CardTitle, Jumbotron } from 'reactstrap';
 
 class App extends Component{
+constructor(props){
+  super(props);
+  this.state={
+    showSecondCard: false  
+  }
+}
+
   render(){
-    let cname="lead"
+    let cname="lead";
+    //console.log(this.state.showSecondCard)
     return(
       <div>
         <Jumbotron>
@@ -14,12 +22,18 @@ class App extends Component{
           <p> Playing with reactstrap</p>
           <p className={cname}></p>
         </Jumbotron>
-        <Card>
+        <Card key="firstCard">
           <CardBody>
             <CardTitle>My Card</CardTitle>
-            <Button onClick={{} => console.log("test") } >Button</Button>
+            <Button onClick={() => this.setState({ showSecondCard : true})} >Button</Button>
           </CardBody>
         </Card>
+        {this.state.showSecondCard ? <Card>
+          <CardBody>
+            <CardTitle>My Second Card</CardTitle>
+            <Button onClick={() => this.setState({ showSecondCard : false})} >Button</Button>
+          </CardBody>
+        </Card> : null }
       </div>
     )
 
