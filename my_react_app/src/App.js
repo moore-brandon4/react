@@ -22,7 +22,12 @@ constructor(props){
           <p> Playing with reactstrap</p>
           <p className={cname}></p>
         </Jumbotron>
-        <Card key="firstCard">
+        <Cards 
+          fade1={this.state.fade1}
+          cardOneState={this.cardOneState}
+          fade2={this.state.fade2}
+          cardTwoState={this.cardTwoState}/>
+        {/* <Card key="firstCard">
           <CardBody>
             <CardTitle>My Card</CardTitle>
             <Button onClick={() => this.setState({ showSecondCard : true})} >Button</Button>
@@ -33,10 +38,16 @@ constructor(props){
             <CardTitle>My Second Card</CardTitle>
             <Button onClick={() => this.setState({ showSecondCard : false})} >Button</Button>
           </CardBody>
-        </Card> : null }
+        </Card> : null } */}
       </div>
     )
 
+  }
+  cardOneState = () => {
+    this.setState({ fade1 : !this.state.fade1})
+  }
+  cardTwoState = () => {
+    this.setState({ fade2 : !this.state.fade2})
   }
 }
 
