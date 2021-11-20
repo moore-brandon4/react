@@ -1,6 +1,7 @@
 import { Component } from 'react';
 import './App.css';
-import { Button, Card, CardBody, CardTitle, Jumbotron } from 'reactstrap';
+import { Jumbotron } from 'reactstrap';
+import Cards from './Cards';
 
 class App extends Component{
 constructor(props){
@@ -27,7 +28,7 @@ constructor(props){
           cardOneState={this.cardOneState}
           fade2={this.state.fade2}
           cardTwoState={this.cardTwoState}/>
-        {/* <Card key="firstCard">
+        {/* {<Card key="firstCard">
           <CardBody>
             <CardTitle>My Card</CardTitle>
             <Button onClick={() => this.setState({ showSecondCard : true})} >Button</Button>
@@ -38,7 +39,7 @@ constructor(props){
             <CardTitle>My Second Card</CardTitle>
             <Button onClick={() => this.setState({ showSecondCard : false})} >Button</Button>
           </CardBody>
-        </Card> : null } */}
+        </Card> : null }  */}
       </div>
     )
 
