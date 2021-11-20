@@ -1,5 +1,6 @@
 import React from "react";
 import { Button, Card, CardBody, CardText, CardTitle, Fade} from 'reactstrap';
+import TextForCards from "./TextForCards";
 
 const Cards = (props) =>{ 
     return(
@@ -10,7 +11,7 @@ const Cards = (props) =>{
             <Button onClick={() => props.cardOneState()} >Button</Button>
             <Fade in={props.fade1} className="my-2">
             <CardText>
-                fade card 1
+                <TextForCards cardNum={1}/>
             </CardText>    
             </Fade>
           </CardBody>
@@ -21,7 +22,7 @@ const Cards = (props) =>{
             <Button onClick={() => props.cardTwoState()} >Button</Button>
             <Fade in={props.fade2} className="my-2">
             <CardText>
-                fade card 2
+              <TextForCards cardNum={2}/>
             </CardText>    
             </Fade>
           </CardBody>

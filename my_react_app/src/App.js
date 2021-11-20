@@ -1,6 +1,7 @@
 import { Component } from 'react';
 import './App.css';
-import { Jumbotron } from 'reactstrap';
+import {Card, CardBody, CardTitle, Jumbotron} from 'reactstrap';
+import TextForCards from "./TextForCards";
 import Cards from './Cards';
 
 class App extends Component{
@@ -28,18 +29,13 @@ constructor(props){
           cardOneState={this.cardOneState}
           fade2={this.state.fade2}
           cardTwoState={this.cardTwoState}/>
-        {/* {<Card key="firstCard">
+          <Card key="firstCard" className="display-3">
           <CardBody>
-            <CardTitle>My Card</CardTitle>
-            <Button onClick={() => this.setState({ showSecondCard : true})} >Button</Button>
+            <CardTitle>My Card without Fade</CardTitle>
+            <TextForCards cardNum={3}/>
           </CardBody>
         </Card>
-        {this.state.showSecondCard ? <Card>
-          <CardBody>
-            <CardTitle>My Second Card</CardTitle>
-            <Button onClick={() => this.setState({ showSecondCard : false})} >Button</Button>
-          </CardBody>
-        </Card> : null }  */}
+        
       </div>
     )
 
