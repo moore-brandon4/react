@@ -1,8 +1,8 @@
 import { Component } from 'react';
-import './App.css';
 import {Card, CardBody, CardTitle, Jumbotron} from 'reactstrap';
 import TextForCards from "./TextForCards";
 import Cards from './Cards';
+import './App.css';
 
 class App extends Component{
 constructor(props){
