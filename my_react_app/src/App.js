@@ -2,7 +2,9 @@ import { Component } from 'react';
 import {Card, CardBody, CardTitle, Jumbotron} from 'reactstrap';
 import TextForCards from "./TextForCards";
 import Cards from './Cards';
+import Dropdowns from './Dropdowns';
 import './App.css';
+
 
 class App extends Component{
 constructor(props){
@@ -35,6 +37,9 @@ constructor(props){
             <TextForCards cardNum={3}/>
           </CardBody>
         </Card>
+        <Dropdowns>
+          <h1>This is a Carousel</h1>
+        </Dropdowns>
         
       </div>
     )
