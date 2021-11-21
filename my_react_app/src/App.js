@@ -1,8 +1,9 @@
 import { Component } from 'react';
-import {Card, CardBody, CardTitle, Jumbotron} from 'reactstrap';
+import { Card, Navbar, CardBody, CardTitle, Jumbotron} from 'reactstrap';
 import TextForCards from "./TextForCards";
 import Cards from './Cards';
 import Dropdowns from './Dropdowns';
+import Navbars from './Navbars';
 import './App.css';
 
 
@@ -19,6 +20,8 @@ constructor(props){
     //console.log(this.state.showSecondCard)
     return(
       <div>
+        <Navbars>
+        </Navbars>
         <Jumbotron>
           <h1 className="display-3">My Firt React app</h1>
           <p className={cname}>This is my first attempt</p>
@@ -38,7 +41,6 @@ constructor(props){
           </CardBody>
         </Card>
         <Dropdowns>
-          <h1>This is a Carousel</h1>
         </Dropdowns>
         
       </div>
