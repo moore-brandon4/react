@@ -24,7 +24,7 @@ constructor(props){
         <Navbars>
         </Navbars>
         <Jumbotron>
-          <h1 className="display-3">My Firt React app</h1>
+          <h1 className="display-3">My Firt React App</h1>
           <p className={cname}>This is my first attempt</p>
           <hr className= {"my-2"} />
           <p> Playing with reactstrap</p>
@@ -35,6 +35,8 @@ constructor(props){
           cardOneState={this.cardOneState}
           fade2={this.state.fade2}
           cardTwoState={this.cardTwoState}
+          fade3={this.state.fade3}
+          cardTwoState={this.cardThreeState}
         />
         {/* <Card key="firstCard" className="display-3">
           <CardBody>
@@ -54,6 +56,9 @@ constructor(props){
   }
   cardTwoState = () => {
     this.setState({ fade2 : !this.state.fade2})
+  }
+  cardThreeState = () => {
+    this.setState({ fade3 : !this.state.fade3})
   }
 }
 
