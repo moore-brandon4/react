@@ -1,17 +1,18 @@
 import React from "react";
 import './App.css';
 import { Card, Button, CardBody, CardTitle, Fade, CardText} from 'reactstrap';
+import TextForCards from "./TextForCards";
 
-const Cards = (fade1, cardOneState, fade2, cardTwoState ) =>{
+const Cards = (props) =>{
     return (
         <>
             <Card key="firstCard" className="display-3">
             <CardBody>
                 <CardTitle>My Card</CardTitle>
-                <Button onClick={() => cardOneState} > Button </Button>
-                <Fade in={fade1} className="my-2">
+                <Button onClick={() => props.cardOneState()} > Button </Button>
+                <Fade in={props.fade1} className="my-2">
                     <CardText>
-                    fade card 1
+                        <TextForCards cardNum={1} />
                     </CardText>
                 </Fade>
             </CardBody>
@@ -19,10 +20,10 @@ const Cards = (fade1, cardOneState, fade2, cardTwoState ) =>{
             <Card className="display-3">
             <CardBody>
                 <CardTitle>My Second Card</CardTitle>
-                <Button onClick={() => cardTwoState} > Button </Button>
-                <Fade in={fade2} className="my-2">
+                <Button onClick={() => props.cardTwoState()} > Button </Button>
+                <Fade in={props.fade2} className="my-2">
                     <CardText>
-                    fade card 2
+                        <TextForCards cardNum={2} />
                     </CardText>
                 </Fade>
             </CardBody>

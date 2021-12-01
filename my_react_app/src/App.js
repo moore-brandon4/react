@@ -1,7 +1,7 @@
 import { Component } from 'react';
-import { Jumbotron} from 'reactstrap';
+import { Jumbotron, Card, CardBody, CardTitle} from 'reactstrap';
 import Cards from "./Cards"
-
+import TextForCards from './TextForCards';
 import Dropdowns from './Dropdowns';
 import Navbars from './Navbars';
 import './App.css';
@@ -36,12 +36,7 @@ constructor(props){
           fade2={this.state.fade2}
           cardTwoState={this.cardTwoState}
         />
-        {/* <Cards 
-          fade1={this.state.fade1}
-          cardOneState={this.cardOneState}
-          fade2={this.state.fade2}
-          cardTwoState={this.cardTwoState}/>
-          <Card key="firstCard" className="display-3">
+        {/* <Card key="firstCard" className="display-3">
           <CardBody>
             <CardTitle>My Card without Fade</CardTitle>
             <TextForCards cardNum={3}/>
