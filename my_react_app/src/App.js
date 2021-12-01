@@ -36,7 +36,14 @@ constructor(props){
           fade2={this.state.fade2}
           cardTwoState={this.cardTwoState}
           fade3={this.state.fade3}
-          cardTwoState={this.cardThreeState}
+          cardThreeState={this.cardThreeState}
+          fade4={this.state.fade4}
+          cardFourState={this.cardFourState}
+          fade5={this.state.fade5}
+          cardFiveState={this.cardFiveState}
+          fade6={this.state.fade6}
+          cardSixState={this.cardSixState}
+
         />
         {/* <Card key="firstCard" className="display-3">
           <CardBody>
@@ -59,6 +66,15 @@ constructor(props){
   }
   cardThreeState = () => {
     this.setState({ fade3 : !this.state.fade3})
+  }
+  cardFourState = () => {
+    this.setState({ fade4 : !this.state.fade4})
+  }
+  cardFiveState = () => {
+    this.setState({ fade5 : !this.state.fade5})
+  }
+  cardSixState = () => {
+    this.setState({ fade6 : !this.state.fade6})
   }
 }
 
