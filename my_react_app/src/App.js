@@ -24,7 +24,7 @@ constructor(props){
         <Navbars>
         </Navbars>
         <Jumbotron>
-          <h1 className="display-3">My Firt React App</h1>
+          <h1 className="display-3">My First React App</h1>
           <p className={cname}>This is my first attempt</p>
           <hr className= {"my-2"} />
           <p> Playing with reactstrap</p>
