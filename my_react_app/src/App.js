@@ -1,7 +1,7 @@
 import { Component } from 'react';
-import { Card, Navbar, CardBody, CardTitle, Jumbotron} from 'reactstrap';
-import TextForCards from "./TextForCards";
-import Cards from './Cards';
+import { Jumbotron} from 'reactstrap';
+import Cards from "./Cards"
+
 import Dropdowns from './Dropdowns';
 import Navbars from './Navbars';
 import './App.css';
@@ -11,7 +11,8 @@ class App extends Component{
 constructor(props){
   super(props);
   this.state={
-    showSecondCard: false  
+    fade1: false,  
+    fade2: false
   }
 }
 
@@ -30,6 +31,12 @@ constructor(props){
           <p className={cname}></p>
         </Jumbotron>
         <Cards 
+          fade1={this.state.fade1} 
+          cardOneState={this.cardOneState}
+          fade2={this.state.fade2}
+          cardTwoState={this.cardTwoState}
+        />
+        {/* <Cards 
           fade1={this.state.fade1}
           cardOneState={this.cardOneState}
           fade2={this.state.fade2}
@@ -39,7 +46,7 @@ constructor(props){
             <CardTitle>My Card without Fade</CardTitle>
             <TextForCards cardNum={3}/>
           </CardBody>
-        </Card>
+        </Card> */}
         <Dropdowns>
         </Dropdowns>
         
